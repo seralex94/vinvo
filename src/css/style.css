@@ -1,0 +1,140 @@
+*{
+	box-sizing: border-box;
+}
+
+input, select{
+	font-size: 16px;
+	outline: none;
+}
+
+select{
+/*	background: url(../img/arrow.svg) no-repeat right #fff;*/
+	-webkit-appearance: none;
+}
+
+
+body{
+	background: linear-gradient(to top, #35499c, #2c3771);
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 16px;
+
+}
+section{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	background: repeating-radial-gradient(circle at 50% 200%, rgba(0,0,0, 0.2) 5px, rgba(0,0,0, 0.1) 20px);
+}
+.container{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*border-radius: 5px;
+    overflow: hidden;*/
+}
+
+.headings{
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	margin-bottom: 12px;
+}
+
+.headings-item{
+	color: #fff;
+}
+
+.item-arrive{
+	width: 287px;
+}
+
+.item-departure{
+	width: 159px;
+}
+
+.item-days{
+	width: 184px;
+}
+
+.search-form{
+	display: flex;
+	border-radius: 5px;
+    overflow: hidden;
+}
+
+.form-field{
+	position: relative;
+	border-right: 1px solid #cfdae6;
+}
+
+
+
+/*.form-field:last-child{
+	border: none;
+}*/
+
+/*.form-field__header{
+	position: absolute;
+	top: -50px;
+    left: 0;
+}*/
+
+.form-field__icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+}
+.form-field__input, .form-field__select{
+	height: 100%;
+	font-family: 'Fira Sans', sans-serif;
+	border: none;
+	padding: 22px 6px 22px 40px;
+    letter-spacing: -1px;
+}
+
+.form-field__select{
+	background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #fff;
+    -webkit-appearance: none;
+    background-position-x: 135px;
+}
+
+.input-arrive{
+	width: 287px;
+}
+
+.select-departure{
+	width: 159px;
+}
+
+.input-days{
+	width: 184px;
+}
+
+#slider-range{
+	display: none;
+}
+
+.form-btn{
+	border: none;
+	width: 146px;
+	background: linear-gradient(to top, #198cff, #1885f2);
+	color: #fefefe;
+	font-weight: bold;
+	font-family: 'Fira Sans', sans-serif;
+	cursor: pointer;
+	padding: 22px 32px;
+}
+
+.form-btn:hover{
+	background: linear-gradient(to top, #409fff, #2693ff);
+	transition: 0.8s;
+}
+
+/*.form-field__input--with-error{
+	color: red;
+}
+*/

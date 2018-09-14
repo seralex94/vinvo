@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta NAME="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Vinvo</title>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="headings">
+				<div class="headings-item item-arrive">
+					<p>Куда вы хотите поехать?</p>
+				</div>
+				<div class="headings-item item-departure">
+					<p>Отправление</p>
+				</div>
+				<div class="headings-item item-days">
+					<p>Количество ночей</p>
+				</div>
+			</div>
+			<form class="search-form">
+				<div class="form-field">
+					<span class="form-field__icon">
+                        <img src="./img/ic-pointer.svg" alt="">
+                    </span>
+                    <input class="form-field__input input-arrive" type="text" name="product" placeholder="Укажите страну, город или отель" list="productName">
+					<datalist id="productName">
+					    <option>Крит, Греция от $96</option>
+					    <option>Остров Кипр, Кипр от $96</option>
+					    <option>Пхукет, Таиланд от $96</option>
+					</datalist>
+				</div>
+				<div class="form-field">
+					<span class="form-field__icon">
+                        <img src="./img/ic-flight.svg" alt="">
+                    </span>
+					<select class="form-field__select select-departure">
+				        <option class="form-field__select-option">Киев</option>
+				        <option class="form-field__select-option">Кривой Рог</option>
+				        <option class="form-field__select-option">Львов</option>
+				        <option class="form-field__select-option">Николаев</option>
+				        <option class="form-field__select-option">Одесса</option>
+					</select>
+				</div>
+				<div class="form-field">
+					<!-- <div class="form-field__header">
+						<label for="amount">Количество ночей:</label>
+					</div> -->
+					<p>
+						<div class="form-field__icon">
+                        	<img src="./img/ic-nights.svg" alt="">
+                    	</div>
+						<input class="form-field__input input-days" type="text" id="amount" readonly>
+					</p>
+ 
+					<div id="slider-range"></div>
+				</div>					
+				<button class="form-btn" type="submit">Поиск туров</button>
+			</form>
+		</div>
+	</section>
+
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
