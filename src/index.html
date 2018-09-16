@@ -6,69 +6,80 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Vinvo</title>
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
   	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-	<section>
+	<section class="search-form">
 		<div class="container">
-			<div class="headings">
-				<div class="headings-item item-arrive">
-					<p>Куда вы хотите поехать?</p>
-				</div>
-				<div class="headings-item item-departure">
-					<p>Отправление</p>
-				</div>
-				<div class="headings-item item-days">
-					<p>Количество ночей</p>
-				</div>
-			</div>
-			<form class="search-form">
-				<div class="form-field">
-					<span class="form-field__icon">
-                        <img src="./img/ic-pointer.svg" alt="">
-                    </span>
-                    <input class="form-field__input input-arrive" type="text" name="product" placeholder="Укажите страну, город или отель" list="productName">
-					<datalist id="productName">
-					    <option>Крит, Греция от $96</option>
-					    <option>Остров Кипр, Кипр от $96</option>
-					    <option>Пхукет, Таиланд от $96</option>
-					</datalist>
-				</div>
-				<div class="form-field">
-					<span class="form-field__icon">
-                        <img src="./img/ic-flight.svg" alt="">
-                    </span>
-					<select class="form-field__select select-departure">
-				        <option class="form-field__select-option">Киев</option>
-				        <option class="form-field__select-option">Кривой Рог</option>
-				        <option class="form-field__select-option">Львов</option>
-				        <option class="form-field__select-option">Николаев</option>
-				        <option class="form-field__select-option">Одесса</option>
+ 			<form class="form">
+ 				<div class="form-field item-arrive">
+ 					<div class="form-field__icon">
+						<img src="./img/ic-pointer.svg" alt="">
+					</div>
+					<label class="form-field__heading" for="arrive">Куда вы хотите поехать?</label>
+					<select name="arrive" id="arrive">
+						<option selected disabled>Укажите страну, город или отель</option>
+						<optgroup label="Места">
+							<option value="Крит">Крит, Греция от $96</option>
+							<option value="Кипр">Остров Кипр, Кипр от $130</option>
+							<option value="Пхукет">Пхукет, Таиланд от $130</option>
+							<option value="Коста-Рика">Коста-Рика от $230</option>
+							<option value="Пекин">Пекин, Китай от $780</option>
+						</optgroup>
+						<optgroup label="Отели">
+							<option value="Краун Плаза Москва">Краун Плаза Москва, Москва, Россия</option>
+							<option value="Краун Плаза Москва">Отель Кайзерхоф, Калининград, Россия</option>
+							<option value="Кантри Резорт Отель">Кантри Резорт Отель, Верблики, Россия</option>
+						</optgroup>
 					</select>
 				</div>
-				<div class="form-field">
-					<!-- <div class="form-field__header">
-						<label for="amount">Количество ночей:</label>
-					</div> -->
+				<div class="form-field item-departure">
+					<div class="form-field__icon">
+			        	<img src="./img/ic-flight.svg" alt="">
+			        </div>
+					<label class="form-field__heading" for="departure">Отправление</label>
+					<select name="departure" id="departure">
+						<option>Одесса</option>
+						<option>Кривой Рог</option>
+						<option selected>Киев</option>
+						<option>Николаев</option>
+						<option>Львов</option>
+					</select>
+				</div>
+				<div class="form-field item-days">
 					<p>
 						<div class="form-field__icon">
-                        	<img src="./img/ic-nights.svg" alt="">
-                    	</div>
-						<input class="form-field__input input-days" type="text" id="amount" readonly>
+				        	<img src="./img/ic-nights.svg" alt="">
+				    	</div>
+						<label class="form-field__heading" for="days">Количество ночей</label>
+						<input id="days" class="form-field__range" type="text"  readonly>
 					</p>
- 
-					<div id="slider-range"></div>
+					<div class="form-field__slider">
+						<div id="slider-range">
+							<div class="range-count">
+								<span class="range-count__min">1</span>
+								<span class="range-count__max">24</span>
+							</div>
+						</div>
+					</div>					
 				</div>					
 				<button class="form-btn" type="submit">Поиск туров</button>
 			</form>
+			<div class="extended-search">
+				<div class="extended-search__example">Например: 
+					<a href="#">туры в Египет</a>
+				</div>
+				<div class="extended-search__link">
+					<img src="./img/ic-search.svg" alt="">
+					<a href="#">Расширенный подбор</a>
+				</div>
+			</div>
 		</div>
 	</section>
-
-
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
